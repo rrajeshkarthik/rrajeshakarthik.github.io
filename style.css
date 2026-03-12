@@ -320,7 +320,19 @@ img { max-width: 100%; display: block; }
   gap: 80px;
   align-items: start;
 }
-.about-photo-placeholder {
+.about-photo-img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: top center;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+/* hide connector line on last timeline item */
+.tl-item:last-child .tl-connector {
+  visibility: hidden;
+}
   aspect-ratio: 4/5;
   background: var(--card-dark);
   border: 1px solid var(--border);
