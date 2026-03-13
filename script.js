@@ -11,9 +11,13 @@ const navToggle = document.getElementById('navToggle');
 const navLinks  = document.getElementById('navLinks');
 navToggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
+  navToggle.classList.toggle('active');
 });
 navLinks.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => navLinks.classList.remove('open'));
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.classList.remove('active');
+  });
 });
 
 // Smooth reveal on scroll
